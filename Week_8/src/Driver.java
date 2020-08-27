@@ -5,7 +5,7 @@
 public class Driver {
 final static int QUEUE_LIMIT = 7;
 	static int front, rear, count;
-static int [] queue;
+static int[] queue;
 	public static void main(String[] args) {
 	enqueue(1);	
 	enqueue(7);	
@@ -18,8 +18,9 @@ static int [] queue;
 	}
 public static void ArrayQ() {
 	front = rear = count = 0;
-	queue = new int [QUEUE_LIMIT];
-}
+	queue = new int[QUEUE_LIMIT];
+	}
+
 
 public static void enqueue(int a) {
 	queue[rear] = a;
