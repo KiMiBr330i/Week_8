@@ -1,12 +1,14 @@
-
+//LinkedNode.java - recreated from the LinkedNode.java method provided in the text
+// and supplemental examples provided for class.
 public class LinkedNode {
-int c;
-LinkedNode next;
+	int c;
+	LinkedNode next;
 
-public void LinkedNode() {
-	next = null;
-}
-public void LinkedNode(int c) {
-this.c = c;
-}
+	public LinkedNode() {
+		next = null;
+	}
+
+	public LinkedNode(int c) {
+		this.c = c;
+	}
 }
