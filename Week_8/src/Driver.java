@@ -12,10 +12,19 @@ public class Driver {
 	static int countLQ;
 
 	public static void main(String[] args) throws NullPointerException {
-	// Integers can be enqueued or dequeued to either linked lists by calling one
-	// of the following methods:
-	// enqueueAQ or dequeueAQ - pertain to the ArrayQ method
-	// enqueueLQ or dequeueLQ - pertain to the LinkedQueue method
+	
+		enqueueAQ(1);
+		enqueueAQ(7);
+		enqueueAQ(3);
+		enqueueAQ(4);
+		enqueueAQ(9);
+		enqueueAQ(2);
+		dequeueAQ();
+		dequeueAQ();
+		dequeueAQ();
+		dequeueAQ();
+		dequeueAQ();
+		dequeueAQ();
 		enqueueLQ(1);
 		enqueueLQ(7);
 		enqueueLQ(3);
@@ -53,11 +62,11 @@ public class Driver {
 		int b = queue[frontAQ];
 		frontAQ = (frontAQ + 1) % queue.length;
 		countAQ--;
-		System.out.println(b);
+		System.out.println(b + " is removed.");
 		return b;
 
 	}
-//--------------ArrayQ Methods------------------------------
+//--------------LinkedQueue Methods------------------------------
 	public void LinkedQueue() {
 		frontLQ = rearLQ = null;
 		countLQ = 0;
@@ -82,13 +91,14 @@ public class Driver {
 			int x = frontLQ.c;
 			frontLQ = frontLQ.next;
 			countLQ--;
-			System.out.println(x);
+			System.out.println(x + " is removed.");
 			return x;
 		} else {
 			int x = frontLQ.c;
 			frontLQ = null;
 			rearLQ = null;
 			countLQ--;
+			System.out.println(x + " is removed.");
 			return x;
 
 		}
